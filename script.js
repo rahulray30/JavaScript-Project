@@ -1,33 +1,32 @@
+
 console.log("HHjhhh");
 var butAll = document.querySelectorAll("button");
 var initArr = [];
-for (let i = 0; i < butAll.length; i++) {
-  initArr.push(butAll[i]);
-}
-console.log(initArr);
+console.log(document.getElementById("r").style.backgroundColor);
+
+
+//console.log(initArr[0].style.backgroundColor);
 
 function colourChange(cs) {
   if (cs.value == "Purple") {
     for (let i = 0; i < butAll.length; i++) {
-      butAll[i].style.backgroundColor = "rgb(128, 0, 128)";
+      butAll[i].style.backgroundColor = "purple";
       console.log("Its purple");
     }
   } else if (cs.value == "Orange") {
     for (let i = 0; i < butAll.length; i++) {
-      butAll[i].style.backgroundColor = "rgb(252, 166, 7)";
+      butAll[i].style.backgroundColor = "orange";
       console.log("Its Orange");
     }
   } else if (cs.value == "Blue") {
     for (let i = 0; i < butAll.length; i++) {
-      butAll[i].style.backgroundColor = "rgb(4, 4, 247)";
+      butAll[i].style.backgroundColor = "blue";
       console.log("Its Blue");
     }
   } else if (cs.value == "Reset") {
-    location.reload();
+    butAll[0].style.backgroundColor = initArr[0];
   }
 }
-
-function reset() {}
 
 var rId = document.getElementById("r");
 console.log(rId.innerHTML);
